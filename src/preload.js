@@ -70,4 +70,4 @@ contextBridge.exposeInMainWorld('host', {
   webSearch: (query) => ipcRenderer.invoke('web:search', query),
   openSite: (address) => ipcRenderer.invoke('apps:site', address),
   focusOverlay: (on) => ipcRenderer.send('overlay:focus', Boolean(on)),
-});
+executarcomando: (cmd) => ipcRenderer.invoke('sistema:executar', cmd)});
